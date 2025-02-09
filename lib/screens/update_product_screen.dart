@@ -22,47 +22,49 @@ class ProductScreen extends StatelessWidget {
       ),
       body: Padding(
         padding: const EdgeInsets.all(16),
-        child: Column(
-          children: [
-            CustomTextField(
-              onChanged: (data) {
-                productName = data;
-              },
-              hintText: 'Product Name',
-            ),
-            const SizedBox(
-              height: 10,
-            ),
-            CustomTextField(
-              onChanged: (data) {
-                image = data;
-              },
-              hintText: 'Product Image',
-            ),
-            const SizedBox(
-              height: 10,
-            ),
-            CustomTextField(
-              onChanged: (data) {
-                description = data;
-              },
-              hintText: 'Product Description',
-            ),
-            const SizedBox(
-              height: 10,
-            ),
-            CustomTextField(
-              onChanged: (data) {
-                price = int.parse(data);
-              },
-              inputType: TextInputType.number,
-              hintText: 'Product Price',
-            ),
-            const SizedBox(
-              height: 10,
-            ),
-            CustomButon(text: 'Update Product')
-          ],
+        child: SingleChildScrollView(
+          child: Column(
+            children: [
+              CustomTextField(
+                onChanged: (data) {
+                  productName = data;
+                },
+                hintText: 'Product Name',
+              ),
+              const SizedBox(
+                height: 10,
+              ),
+              CustomTextField(
+                onChanged: (data) {
+                  image = data;
+                },
+                hintText: 'Product Image',
+              ),
+              const SizedBox(
+                height: 10,
+              ),
+              CustomTextField(
+                onChanged: (data) {
+                  description = data;
+                },
+                hintText: 'Product Description',
+              ),
+              const SizedBox(
+                height: 10,
+              ),
+              CustomTextField(
+                onChanged: (data) {
+                  price = int.parse(data);
+                },
+                inputType: TextInputType.number,
+                hintText: 'Product Price',
+              ),
+              const SizedBox(
+                height: 10,
+              ),
+              CustomButon(text: 'Update Product')
+            ],
+          ),
         ),
       ),
     );
