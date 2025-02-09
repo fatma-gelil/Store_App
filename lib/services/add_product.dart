@@ -15,7 +15,7 @@ class AddProduct {
       'description': description,
       'image': image,
       'category': category
-    });
+    }, );
     return ProductModel.fromjson(data);
   }
 }

@@ -27,6 +27,7 @@ class HomeScreen extends StatelessWidget {
       body: Padding(
           padding: const EdgeInsets.only(left: 16, right: 16, top: 65),
           child: FutureBuilder<List<ProductModel>>(
+            future: GetAllProductService().getAllProducts(),
             builder: (context, snapshot) {
               if (snapshot.hasData) {
                 List<ProductModel> products = snapshot.data!;
@@ -43,10 +44,10 @@ class HomeScreen extends StatelessWidget {
                     });
               }
                else {
-                return const CircularProgressIndicator();
+                return const Center(child: CircularProgressIndicator());
               }
             },
-            future: GetAllProductService().getAllProducts(),
+            
           )),
     );
   }
